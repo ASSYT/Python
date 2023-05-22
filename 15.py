@@ -11,3 +11,16 @@
 # число – это масса соответствующего арбуза
 # Input: 5 -> 5 1 6 5 9
 # Output: 1 9
+
+watermelons = int(input('Введите кол-во арбузов: '))
+
+max_kg = int(input('Введите массу арбуза: '))
+min_kg = max_kg
+for _ in range(watermelons - 1):
+    weight = int(input('Введите массу арбуза: '))
+    if weight > max_kg:
+        max_kg = weight
+    else:
+        if weight < min_kg:
+            min_kg = weight
+print(f'Для себя любимого - {max_kg}, для любимой тещи - {min_kg}')
