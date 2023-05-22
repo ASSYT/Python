@@ -6,3 +6,20 @@
 # Input: 5
 # Output: 6
 # f(1)=0 и f(2)=1 далее f(n)=f(n-2)+f(n-1), n -позиция числа Фибоначчи...
+
+a = int(input("Введите значение: ")) # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610,
+# 987, 1597, 2584, 4181, 6765, 10946, 17711,
+
+first = 0
+second = 1
+third = first + second
+count = 3
+while third < a:
+    first = second
+    second = third
+    third = first + second
+    count += 1
+if third == a:
+    print(count)
+else:
+    print(-1)
