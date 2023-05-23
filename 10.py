@@ -5,20 +5,35 @@
 # повернуты вверх одной и той же стороной. 
 # Выведите минимальное количество монет, которые нужно перевернуть.
 
-num_coins = int(input('Введите колличество монет: '))
-emblem_posit = int(input('Введите символ, обозначающий положение монеты  -  герб (рекомендуем - 1): '))
-tails_posit = int(input('Введите символ, обозначающий положение монеты - решка (рекомендуем - 0): '))
-n = 0 # кол-во монет в положении герб
-k = 0 # кол-во монет в положении решка
-for _ in range(num_coins):
-    position = int(input('Введите положение монеты): '))
-    if position == emblem_posit:
-        n += 1
-    else:
-        k += 1
-if n < k:
-    min = n
-else:
-    min = k
+# num_coins = int(input('Введите колличество монет: '))
+# emblem_posit = int(input('Введите символ, обозначающий положение монеты  -  герб (рекомендуем - 1): '))
+# tails_posit = int(input('Введите символ, обозначающий положение монеты - решка (рекомендуем - 0): '))
+# n = 0 # кол-во монет в положении герб
+# k = 0 # кол-во монет в положении решка
+# for _ in range(num_coins):
+#     position = int(input('Введите положение монеты): '))
+#     if position == emblem_posit:
+#         n += 1
+#     else:
+#         k += 1
+# if n < k:
+#     min = n
+# else:
+#     min = k
 
-print(f'минимальное количество монет, которые нужно перевернуть - {min}')
+# print(f'минимальное количество монет, которые нужно перевернуть - {min}')
+
+# Примеры идевльного решения
+n = int(input())
+count_zero = 0
+count_one = 0
+for i in range(n):
+    x = int(input())
+if x == 0:
+    count_zero += 1
+else:
+    count_one += 1
+if count_one > count_zero:
+    print(count_zero)
+else:
+    print(count_one)
