@@ -131,7 +131,7 @@ b = {2, 5, 8, 13, 21}
 # dr = b.difference(a) # dr = {13, 21} разница b-a
 # print(dr)
 
-# q=a.union(b).difference(a.intersection(b)) # {1, 21, 3, 13} (a-b)+(b-a)
+# q=a.union(b).difference(a.intersection(b)) # {1, 21, 3, 13} (a+b)+(a-b)
 # print(q)
 
 # a = {1, 2, 3, 5, 8}
