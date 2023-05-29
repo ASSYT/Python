@@ -17,9 +17,12 @@ for _ in range(n):
     some_list.append(int(input()))
 # print(some_list)
 x = int(input('Введите значение Х = '))
-count = 0
-# решение
-for element in some_list:
-    if element == x:
-        count += 1
-print(f"-> {count} ")
+# count = 0
+# решение 1
+# for element in some_list:
+#     if element == x:
+#         count += 1
+# print(f"-> {count} ")
+
+# решение 2
+print(some_list.count(x))
