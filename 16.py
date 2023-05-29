@@ -22,4 +22,4 @@ count = 0
 for element in some_list:
     if element == x:
         count += 1
-print(count)
+print(f"-> {count} ")
