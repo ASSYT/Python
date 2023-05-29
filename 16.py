@@ -9,3 +9,17 @@
 # 1 2 3 4 5
 # 3
 # -> 1
+
+# создание списка
+n = int(input('Введите кол-во элементов: '))
+some_list = []
+for _ in range(n):
+    some_list.append(int(input()))
+# print(some_list)
+x = int(input('Введите значение Х = '))
+count = 0
+# решение
+for element in some_list:
+    if element == x:
+        count += 1
+print(count)
