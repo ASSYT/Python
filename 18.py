@@ -10,3 +10,45 @@
 # 1 2 3 4 5
 # 6
 # -> 5
+import time
+# создание списка
+n = int(input('Введите кол-во элементов: '))
+some_list = []
+for _ in range(n):
+    some_list.append(int(input()))
+print(some_list)
+
+# решение
+some_list.sort()
+print(some_list)
+x = int(input('Введите значение Х = '))
+
+# 1 var
+start = time.perf_counter()
+if x < some_list[0]:
+    print(f'-> {some_list[0]}')
+else:
+    i = 1
+    while x > some_list[i] and i < n-1:
+        i += 1
+    if abs(x-some_list[i]) >= (x-some_list[i-1]):
+        print(f'-> {some_list[i-1]}')
+    if abs(x-some_list[i]) <= abs(x-some_list[i-1]):
+        print(f'-> {some_list[i]}')
+end = time.perf_counter()
+first_duration = end - start
+
+
+#  2 var БЫСТРЕЕ
+start = time.perf_counter()
+i = 1
+while x > some_list[i] and i < n-1:
+    i += 1
+if abs(x-some_list[i]) >= (x-some_list[i-1]):
+    print(f'-> {some_list[i-1]}')
+        # ind = i-1
+if abs(x-some_list[i]) <= abs(x-some_list[i-1]):
+    print(f'-> {some_list[i]}')
+end = time.perf_counter()
+second_duration = end - start
+print(first_duration / second_duration)
