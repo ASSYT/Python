@@ -16,6 +16,7 @@
 # 4 -> 1 2 3 4
 # 9
 
+import time
 # создание списка (грядки)
 n = int(input('Введите кол-во кустов: '))
 yield_list = []
@@ -23,7 +24,9 @@ for j in range(n):
     yield_list.append(int(input(f'Введите урожай каждого {j+1} куста: ')))
 print(yield_list, end = ' ')
 print()
-# решение
+
+# решение 1
+start = time.perf_counter()
 max_yield = yield_list[n-1] + yield_list[0] + yield_list[1]
 for i in range (1,n-1):
     sum = yield_list[i-1] + yield_list[i] + yield_list[i+1]
@@ -33,5 +36,20 @@ sum = yield_list[n-2] + yield_list[n-1] + yield_list[0]
 if sum >= max_yield:
     max_yield = sum
 print(max_yield)
+end = time.perf_counter()
+first_duration = end - start
 
-
+# решение 2 БЫСТРЕЕ
+start = time.perf_counter()
+yield_list.insert(n, yield_list[0]) 
+yield_list.insert(n+1, yield_list[1])
+# print(yield_list)
+max_yield = yield_list[0] + yield_list[1] + yield_list[2]
+for i in range (2,n+1):
+    sum = yield_list[i-1] + yield_list[i] + yield_list[i+1]
+    if sum >= max_yield:
+        max_yield = sum 
+print(max_yield)
+end = time.perf_counter()
+second_duration = end - start
+print(first_duration / second_duration)
