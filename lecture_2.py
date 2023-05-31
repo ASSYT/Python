@@ -94,13 +94,14 @@ print(list_1) # [7, -1, 21, 0]
 # print(dictionary.items())
 
 # МНОЖЕСТВО - содержат уникальные элементы, не обязательно упорядоченные
+# значения любых типов, можно совершать над ними любые стандартные операции: объединение, пересечение и разность
 # colors = {'red', 'green', 'blue'}
 # print(colors) # {'red', 'green', 'blue'}
 
 # colors.add('red') # добавить
 # print(colors) # {'red', 'green', 'blue'} если есть то не добавит
 
-# colors.remove('red')
+# colors.remove('red') # удалить
 # print(colors) # {'green', 'blue','gray'}
 # colors.remove('red') # KeyError: 'red'
 # colors.discard('red') # ok
@@ -128,7 +129,7 @@ print(list_1) # [7, -1, 21, 0]
 # dr = b.difference(a) # dr = {13, 21} разница b-a
 # print(dr)
 
-# q=a.union(b).difference(a.intersection(b)) # {1, 21, 3, 13} (a+b)+(a-b)
+# q=a.union(b).difference(a.intersection(b)) # {1, 21, 3, 13} (a объединяет с b) -(a пересечение b)
 # print(q)
 
 # a = {1, 2, 3, 5, 8}
