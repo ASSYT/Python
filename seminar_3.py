@@ -1,9 +1,11 @@
 # Картежи
 # Множество
-# some_set = set()
-# some_set.add(1)
-# some_set.add(10)
-# some_set.add(30)
+some_set = set()
+some_set.add(1)
+some_set.add(10)
+some_set.add(30)
+print(some_set)
+
 ##
 # import random
 # import time
@@ -26,15 +28,15 @@
 ##
 # СЛОВАРИ
 # some_dict = {ключ: значение,}
-some_dict = {'яблоко': 'apple', 'виноград': 'grape', 'банан': 'ban'}
-some_dict['банан'] = 'banana'
-print(some_dict['виноград'])
+# some_dict = {'яблоко': 'apple', 'виноград': 'grape', 'банан': 'ban'}
+# some_dict['банан'] = 'banana'
+# print(some_dict['виноград'])
 
-for i in some_dict:
-    print(i, some_dict[i])
+# for i in some_dict:
+#     print(i, some_dict[i])
 
-for j in some_dict.values():
-    print(j)
+# for j in some_dict.values():
+#     print(j)
 
-for i in sorted(some_dict):
-    print(i, some_dict[i])
+# for i in sorted(some_dict):
+#     print(i, some_dict[i])
