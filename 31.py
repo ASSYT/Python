@@ -13,5 +13,19 @@ x = int(input())
 a, b = 1, 1
 
 for i in range(0, x+1):
-    print(i, '=>', a)
+    if i == x:
+        print(i, '=>', a)
     a, b = b, a + b
+print(' ')
+
+# с рекурсией
+def fib(n):
+    if (n <= 1):
+        return n
+    return (fib(n-1) + fib(n-2))
+n = int(input("Введите число членов последовательности:"))
+print(f"{n}-е число Фибоначчи => {fib(i+1)}")
+# print("Последовательность Фибоначчи:")
+# for i in range(1, n+1):
+#     print(fib(i), end =' ')
+print(' ')
