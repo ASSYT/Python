@@ -52,3 +52,33 @@ if abs(x-some_list[i]) <= abs(x-some_list[i-1]):
 end = time.perf_counter()
 second_duration = end - start
 print(first_duration / second_duration)
+
+# препод 1
+count = int(input('Кол-во: '))
+some_list = []
+for _ in range(count):
+    number = int(input())
+    some_list.append(number)
+
+# some_list = [int(input('Введите число: ')) for _ in range(int(input('Кол-во: ')))]
+
+x = int(input('Заданное число: '))
+find_number = some_list[0]
+for number in some_list:
+    if abs(x - number) < abs(x - find_number):
+        find_number = number
+print(find_number)
+
+# препод 2
+# count = int(input('Кол-во: '))
+# some_set = set([int(input('Введите число: ')) for _ in range(count)])
+# x = int(input('Заданное число: '))
+# diff = 1
+# while True:
+#     if x + diff in some_set:
+#         print(x + diff)
+#         break
+#     if x - diff in some_set:
+#         print(x - diff)
+#         break
+#     diff += 1
