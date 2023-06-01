@@ -28,6 +28,7 @@
 # # print(concatenatio(1, 2, 3, 4)) # TypeError: ...
 
 # # Рекурсия — это функция, вызывающая сама себя.
+
 # def fib(n):
 #     if n in [1, 2]:
 #         return 1
