@@ -7,3 +7,11 @@
 # Input: 7
 # Output: 21
 # Задание необходимо решать через рекурсию
+
+ #  без рекурсии
+x = int(input())
+a, b = 1, 1
+
+for i in range(0, x+1):
+    print(i, '=>', a)
+    a, b = b, a + b
