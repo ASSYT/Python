@@ -6,3 +6,19 @@
 
 # Input: 5
 # Output: yes
+import time
+
+num = int(input('Введите число: '))
+i = 2
+if num ==2:
+    print(f"число {num} является простым")
+while num % i != 0:
+    i += 1
+    if i == num-1:
+        print(f"число {num} является простым")
+if i < num:
+    print(f"число {num} не является простым")
+
+
+
+
