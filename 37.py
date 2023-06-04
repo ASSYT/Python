@@ -26,12 +26,20 @@
 
 # print_to(5)
 
+# def change(k): # вывод в консоль перевернуть  
+#     if k > 0: 
+#         c = int(input('Введите элемент последовательности: '))
+#         change(k-1)   
+#         print(c, end = ' ') 
+
 def change(k): # вывод в консоль перевернуть  
-    if k > 0: 
+    if k <= 0: 
+        return
+    else:
         c = int(input('Введите элемент последовательности: '))
         change(k-1)   
-        print(c, end = ' ') 
-        
+        print(c, end = ' ')
+
 n = int(input('Введите кол-во элементов последовательности N =  '))
 change(n)
 print(" ")
