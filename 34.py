@@ -27,10 +27,11 @@ def rhyme (phrase_1):
     return some_list     
 
 # phrase = 'пара-ра-рам рам-пам-папам па-ра-па-да'
-phrase = 'пара-ра-рам рам-папам па-ра-па-да'
+# phrase = 'пара-ра-рам рам-папам па-ра-па-да'
+phrase = str(input("введите фразу: "))
 new_list = list(map(
         lambda i: 'Парам пам-пам' 
-        if len(rhyme(phrase)) == rhyme(phrase).count(rhyme(phrase)[0])
+        if len(phrase.split()) != 1 and len(rhyme(phrase)) == rhyme(phrase).count(rhyme(phrase)[0])
         else 'Пам парам', 
         rhyme (phrase)
     )
