@@ -7,10 +7,15 @@
 # 2 2
 # 4
 
+# def sum(c, d):
+#     if c == 0:
+#         return d
+#     return sum(c - 1, d + 1)
+
 def sum(c, d):
     if c == 0:
         return d
-    return sum(c - 1, d + 1)
+    return 1 + sum(c-1, d)
 
 a = int (input("Введите целое неотрицательное число а = "))
 b = int (input("Введите целое неотрицательное число в = "))
