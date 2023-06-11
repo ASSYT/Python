@@ -13,3 +13,18 @@
 #  0                                     2
 
 # (каждое число вводится с новой строки)
+
+number = int(input('Введите количество элементов в массиве: '))
+lst = []
+
+for _ in range(number):
+    lst.append(int(input('Введите числа: ')))
+
+count = 0
+
+for i in range(1, len(lst) - 1):
+    if lst[i + 1] < lst[i] > lst[i - 1]:
+        count += 1
+
+print(*lst)
+print(count)
