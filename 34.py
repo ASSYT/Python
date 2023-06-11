@@ -38,4 +38,3 @@ new_list = list(map(
 )
 
 print(new_list[0])
-
