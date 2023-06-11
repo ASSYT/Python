@@ -9,8 +9,7 @@
 def degree_number (c, d):
     if d == 0:
         return 1
-    d -= 1
-    return c * degree_number (c, d)
+    return c * degree_number (c, d-1)
 
 a = int (input("Введите первое число А = "))
 b = int (input("Введите второе число В = "))
